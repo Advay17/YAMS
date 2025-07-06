@@ -1,14 +1,16 @@
-#include <Sprocket.h>
+
 #include <vector>
+#include "gearing/Sprocket.h"
+#include <wpi/StringExtras.h>
 Sprocket::Sprocket(std::span<double> sprocketReductionStage) {
     setupStages(sprocketReductionStage);
 }
 Sprocket::Sprocket(std::span<std::string> reductionStage){
     std::vector<double> stages(reductionStage.size());
-    for (size_t i = 0; i < sizeof(reductionStage) / sizeof(reductionStage[0]); i++)
+    for (size_t i = 0; i < reductionStage.size(); i++)
     {
         std::string stage = reductionStage[i];
-        if (!stage.contains(":"))
+        if (wpi::contains(stage, ":"))
         {
             // TODO: InvalidStageGivenException
         }

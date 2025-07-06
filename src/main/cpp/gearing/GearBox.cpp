@@ -1,5 +1,7 @@
-#include "GearBox.h"
+
 #include <vector>
+#include "gearing/GearBox.h"
+#include <wpi/StringExtras.h>
 GearBox::GearBox(std::span<double> reductionStage)
 {
     setupGearBox(reductionStage);
@@ -7,10 +9,10 @@ GearBox::GearBox(std::span<double> reductionStage)
 GearBox::GearBox(std::span<std::string> reductionStage)
 {
     std::vector<double> stages(reductionStage.size());
-    for (size_t i = 0; i < sizeof(reductionStage) / sizeof(reductionStage[0]); i++)
+    for (size_t i = 0; i < reductionStage.size(); i++)
     {
         std::string stage = reductionStage[i];
-        if (!stage.contains(":"))
+        if (wpi::contains(stage, ":"))
         {
             // TODO: InvalidStageGivenException
         }
