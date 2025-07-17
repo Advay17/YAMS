@@ -1,5 +1,5 @@
-#include <SmartMath.h>
 #include <cstdarg>
+#include "math/SmartMath.h"
 double SmartMath::sensorToMechanismRatio(double stages...){
     if(stages == 0){
         //TODO: NoStagesGivenException

@@ -1,8 +1,8 @@
 #pragma once
 
 #include <networktables/NetworkTable.h>
-#include <networktables/BooleanPublisher.h>
-#include <networktables/DoublePublisher.h>
+#include <networktables/BooleanTopic.h>
+#include <networktables/DoubleTopic.h>
 #include <units/angle.h>
 #include <units/angular_velocity.h>
 #include <units/temperature.h>
@@ -23,23 +23,23 @@ public:
     void publish(std::shared_ptr<nt::NetworkTable> publishTable, TelemetryVerbosity verbosity);
 
     // Public telemetry data
-    bool mechanismLowerLimit;
-    bool mechanismUpperLimit;
-    bool temperatureLimit;
-    bool velocityControl;
-    bool elevatorFeedforward;
-    bool armFeedforward;
-    bool simpleFeedforward;
-    bool motionProfile;
-    double setpointPosition;
-    double setpointVelocity;
-    double feedforwardVoltage;
-    double pidOutputVoltage;
-    double outputVoltage;
-    double statorCurrent;
-    units::temperature::fahrenheit_t temperature;
-    units::length::meter_t distance;
-    units::velocity::meters_per_second_t linearVelocity;
+    bool mechanismLowerLimit = false;
+    bool mechanismUpperLimit = false;
+    bool temperatureLimit = false;
+    bool velocityControl = false;
+    bool elevatorFeedforward = false;
+    bool armFeedforward = false;
+    bool simpleFeedforward = false;
+    bool motionProfile = false;
+    double setpointPosition = 0;
+    double setpointVelocity = 0;
+    double feedforwardVoltage = 0;
+    double pidOutputVoltage = 0;
+    double outputVoltage = 0;
+    double statorCurrent = 0;
+    units::temperature::fahrenheit_t temperature = 72_degF;
+    units::length::meter_t distance = 0_m;
+    units::velocity::meters_per_second_t linearVelocity = 0_mps;
     units::angle::radian_t mechanismPosition;
     units::angular_velocity::radians_per_second_t mechanismVelocity;
     units::angle::radian_t rotorPosition;

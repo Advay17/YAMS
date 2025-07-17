@@ -1,4 +1,5 @@
-#include <MechanismGearing.h>
+#include "gearing/MechanismGearing.h"
+
 MechanismGearing::MechanismGearing(GearBox gearBox) : gearBox(gearBox) {}
 MechanismGearing::MechanismGearing(GearBox gearBox, Sprocket sprockets) : gearBox(gearBox), sprockets(sprockets) {}
 double MechanismGearing::getRotorToMechanismRatio() const{
