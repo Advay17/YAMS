@@ -38,12 +38,12 @@ void GearBox::setupGearBox(std::span<double> reductionStage)
     gearReductionRatio = gearBox;
 }
 
-double GearBox::getInputToOutputConversionFactor() const
+double GearBox::GetInputToOutputConversionFactor() const
 {
     return gearReductionRatio;
 }
 
-double GearBox::getOutputToInputConversionFactor() const
+double GearBox::GetOutputToInputConversionFactor() const
 {
     return 1.0 / gearReductionRatio;
 }

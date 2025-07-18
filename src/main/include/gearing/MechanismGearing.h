@@ -6,8 +6,8 @@ class MechanismGearing
 public:
     MechanismGearing(GearBox gearBox);
     MechanismGearing(GearBox gearBox, Sprocket sprockets);
-    double getRotorToMechanismRatio() const;
-    double getMechanismToRotorRatio() const;
+    double GetRotorToMechanismRatio() const;
+    double GetMechanismToRotorRatio() const;
 
 private:
     const GearBox gearBox;

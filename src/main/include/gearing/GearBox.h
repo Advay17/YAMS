@@ -21,13 +21,13 @@ public:
      *
      * @return OUT/IN or OUT:IN
      */
-    double getInputToOutputConversionFactor() const;
+    double GetInputToOutputConversionFactor() const;
     /**
      * Get the conversion factor to transform the gearbox output value into the gear box input value.
      *
      * @return IN:OUT or IN/OUT
      */
-    double getOutputToInputConversionFactor() const;
+    double GetOutputToInputConversionFactor() const;
 
 private:
     /**

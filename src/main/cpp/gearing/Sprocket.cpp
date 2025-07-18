@@ -35,10 +35,10 @@ void Sprocket::setupStages(std::span<double> sprocketReductionStage){
     sprocketReductionRatio = sprocketRatio;
 }
 
-double Sprocket::getInputToOutputConversionFactor() const {
+double Sprocket::GetInputToOutputConversionFactor() const {
     return sprocketReductionRatio;
 }
 
-double Sprocket::getOutputToInputConversionFactor() const {
+double Sprocket::GetOutputToInputConversionFactor() const {
     return 1.0 / sprocketReductionRatio;
 }

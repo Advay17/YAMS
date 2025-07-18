@@ -1,6 +1,6 @@
-#include "motorcontrollers/SmartMotorControllerTelemetry.h"
+#include "telemetry/SmartMotorControllerTelemetry.h"
 
-void SmartMotorControllerTelemetry::publish(std::shared_ptr<nt::NetworkTable> publishTable, TelemetryVerbosity verbosity)
+void SmartMotorControllerTelemetry::Publish(std::shared_ptr<nt::NetworkTable> publishTable, TelemetryVerbosity verbosity)
 {
     if (publishTable != table)
     {

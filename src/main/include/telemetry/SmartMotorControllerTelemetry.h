@@ -20,7 +20,7 @@ public:
         HIGH
     };
 
-    void publish(std::shared_ptr<nt::NetworkTable> publishTable, TelemetryVerbosity verbosity);
+    void Publish(std::shared_ptr<nt::NetworkTable> publishTable, TelemetryVerbosity verbosity);
 
     // Public telemetry data
     bool mechanismLowerLimit = false;

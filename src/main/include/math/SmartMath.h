@@ -7,7 +7,7 @@ public:
      * @param stages
      * @return
      */
-    static double sensorToMechanismRatio(double stages...);
+    static double SensorToMechanismRatio(double stages...);
     /**
      * Create the gear ratio based off of the stages in the gear box.
      *
@@ -15,5 +15,5 @@ public:
      * @return rotor rotations to mechanism ratio in the form of MECHANISM_ROTATIONS/ROTOR_ROTATIONS or
      * ROTOR_ROTATIONS:MECHANISM_ROTATIONS
      */
-    static double gearBox(double stages...);
+    static double GearBox(double stages...);
 };

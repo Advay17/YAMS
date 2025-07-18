@@ -1,6 +1,6 @@
 #include <cstdarg>
 #include "math/SmartMath.h"
-double SmartMath::sensorToMechanismRatio(double stages...){
+double SmartMath::SensorToMechanismRatio(double stages...){
     if(stages == 0){
         //TODO: NoStagesGivenException
     }
@@ -14,7 +14,7 @@ double SmartMath::sensorToMechanismRatio(double stages...){
     return sensorToMechanismRatio;
 }
 
-double gearBox(double stages...){
+double GearBox(double stages...){
     if(stages == 0){
         //TODO: NoStagesGivenException
     }

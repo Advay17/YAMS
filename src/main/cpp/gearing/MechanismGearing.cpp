@@ -2,17 +2,17 @@
 
 MechanismGearing::MechanismGearing(GearBox gearBox) : gearBox(gearBox) {}
 MechanismGearing::MechanismGearing(GearBox gearBox, Sprocket sprockets) : gearBox(gearBox), sprockets(sprockets) {}
-double MechanismGearing::getRotorToMechanismRatio() const{
-    double ratio = gearBox.getInputToOutputConversionFactor();
+double MechanismGearing::GetRotorToMechanismRatio() const{
+    double ratio = gearBox.GetInputToOutputConversionFactor();
     if (sprockets.has_value()) {
-        ratio *= sprockets->getInputToOutputConversionFactor();
+        ratio *= sprockets->GetInputToOutputConversionFactor();
     }
     return ratio;
 }
-double MechanismGearing::getMechanismToRotorRatio() const {
-    double ratio = gearBox.getOutputToInputConversionFactor();
+double MechanismGearing::GetMechanismToRotorRatio() const {
+    double ratio = gearBox.GetOutputToInputConversionFactor();
     if (sprockets.has_value()) {
-        ratio *= sprockets->getOutputToInputConversionFactor();
+        ratio *= sprockets->GetOutputToInputConversionFactor();
     }
     return ratio;
 }
